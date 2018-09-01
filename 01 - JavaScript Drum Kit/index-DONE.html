@@ -59,6 +59,28 @@
 
 <script>
 
+		//FUNCIONES
+		function playSound(e) {
+			const keyCode = event.keyCode;
+			//Reproduzco el sonido
+			const audio = document.querySelector(`audio[data-key="${keyCode}"`);
+			if(!audio) return
+			audio.play()
+			audio.currentTime = 0
+			//Agrego la clase que tiene el efecto visual
+			const myKey = document.querySelector(`.key[data-key="${keyCode}"`);
+			myKey.classList.add('playing')
+		}
+
+		function removeTransition(e) {
+			if(e.propertyName!=="transform") return
+			e.currentTarget.classList.remove('playing')
+		}
+
+		//LISTENERS
+		window.addEventListener('keydown', playSound);
+		document.querySelectorAll('.key').forEach(key => key.addEventListener('transitionend', removeTransition))
+
 </script>
 
 
