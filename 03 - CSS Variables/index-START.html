@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <title>Scoped CSS Variables and JS</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 <body>
   <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
@@ -15,10 +17,10 @@
     <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
 
     <label for="base">Base Color</label>
-    <input id="base" type="color" name="base" value="#ffc600">
+    <input id="base" type="color" name="base" value="#FF69B4">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <img src="https://image.freepik.com/foto-gratis/sabrosos-apetitosos-accesorios-de-fiesta-sobre-fondo-azul-brillante_1220-1691.jpg">
 
   <style>
 
@@ -26,13 +28,43 @@
       misc styles, nothing to do with CSS variables
     */
 
+	:root {
+        --base:#FF69B4;
+        --spacing:5px;
+        --blur:10px;
+	}
+	
+    img {
+    	padding: var(--spacing);
+    	background: var(--base);
+    	border-radius:15px;
+    	filter:blur(var(--blur));
+    }
+	
+	.hl {
+		color:var(--base);
+	}
+
+	* {
+		margin:0;
+		padding:0;
+	}
+
     body {
       text-align: center;
-      background: #193549;
+      background: #FEAC5E;  
+      background: -webkit-linear-gradient(#4BC0C8, #C779D0, #FEAC5E) fixed;
+      background: -o-linear-gradient(#4BC0C8, #C779D0, #FEAC5E) fixed;
+      background: linear-gradient(#4BC0C8, #C779D0, #FEAC5E) fixed;  
       color: white;
-      font-family: 'helvetica neue', sans-serif;
+      font-family: 'Indie Flower', cursive;
       font-weight: 100;
-      font-size: 50px;
+      font-size: 40px;
+    }
+
+    h2 {
+    	margin-top:15px;
+    	margin-bottom:15px;
     }
 
     .controls {
@@ -45,6 +77,14 @@
   </style>
 
   <script>
+  	const inputs = document.querySelectorAll('.controls input');
+  	function handleUpdate(){
+  		const suffix = this.dataset.sizing || ""
+  		document.documentElement.style.setProperty(`--${this.name}`, this.value+suffix)
+  	}
+
+  	inputs.forEach(input => input.addEventListener('change', handleUpdate))
+  	inputs.forEach(input => input.addEventListener('mousemove', handleUpdate))
   </script>
 
 </body>
