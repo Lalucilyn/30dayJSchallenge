@@ -1,6 +1,9 @@
     html {
       box-sizing: border-box;
-      background:#ffc600;
+      background: #C6FFDD;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(left, #f7797d, #FBD786, #C6FFDD);
+      background: -o-linear-gradient(left, #f7797d, #FBD786, #C6FFDD);
+      background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       font-family:'helvetica neue';
       font-size: 20px;
       font-weight: 200;
@@ -22,13 +25,13 @@
       margin: 0;
       text-align: center;
       outline:0;
-      border: 10px solid #F7F7F7;
+      border: 10px solid #00acc1;
+      border-radius:20px;
       width: 120%;
       left: -10%;
       position: relative;
       top: 10px;
       z-index: 2;
-      border-radius: 5px;
       font-size: 40px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
     }
@@ -67,5 +70,5 @@
     }
 
     .hl {
-      background:#ffc600;
+      background:#b4ffff;
     }
