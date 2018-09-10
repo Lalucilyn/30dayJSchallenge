@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log("¡Yo soy un console.log regular!")
+    
+    // Interpolated
+    console.log("¡Yo soy un %s!", "console.log interpolado")
+    let miVariable = "otro console.log interpolado"
+    console.log(`¡Y yo soy ${miVariable}! ¡Hola!`)
+    
+    // Styled
+    console.log("%c¡Whoa! ¡Yo soy un console.log CON ESTILO!", "color:hotpink; font-size:20px; padding:5px; border:3px solid plum")
+    
+    // warning!
+    console.warn("¡Advertencia! ¡Soy una advertencia!")
+
+    // Error :|
+    console.error("Y yo soy un error :(")
+    
+    // Info
+    console.info("Soy un mensaje informativo. Estoy informando.")
+    
+    // Testing
+    console.assert(1===2, "Si me estás viendo es porque Lucía mintió")
+    const p = document.querySelector('p')
+    console.assert(p.classList.contains("holi"), "Si me estás viendo, Lucía mintió otra vez")
+    
+    // clearing
+    //console.clear()
+
+    // Viewing DOM Elements
+    console.log(p)
+    console.dir(p)
+    
+    // Grouping together
+    dogs.forEach(dog=>{
+    	console.groupCollapsed(`${dog.name}`);
+    	console.log(`Este perro se llama ${dog.name}`)
+    	console.log(`${dog.name} tiene ${dog.age} años`)
+    	console.log(`En años humanos, ${dog.name} tendría ${dog.age * 7} años`)
+    	console.groupEnd(`${dog.name}`)
+    })
+    
+    // counting
+    console.count('hola')
+    console.count('hola')
+    console.count('chau')
+    console.count('chau')
+    console.count('hola')
+    console.count('hola')
+    console.count('hola')
+    console.count('chau')
+    
+    //Console.table
+    console.table(dogs)
+
+    // timing
+    console.time('fetching data');
+    
+    fetch('https://api.github.com/users/lalucilyn')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+  </script>
+</body>
+</html>
