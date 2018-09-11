@@ -1,3 +1,5 @@
+NOTA 10/09: Me confundí al hacer el commit y en lugar de poner "día 10" puse "día 11" ¡Perdón! Este commit del readme debería remediarlo ¡saludos!
+
 # 30dayJSchallenge
 Dear JS: We will, we will ROCK YOU.
 
