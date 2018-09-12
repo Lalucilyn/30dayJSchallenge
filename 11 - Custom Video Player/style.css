@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  max-height:100%;
 }
 
 *, *:before, *:after {
@@ -16,6 +17,7 @@ body {
   background-size:cover;
   align-items: center;
   justify-content: center;
+  max-height:100%;
 }
 
 .player {
@@ -25,6 +27,7 @@ body {
   position: relative;
   font-size: 0;
   overflow: hidden;
+  max-height:720px;
 }
 
 /* This css is only applied when fullscreen is active. */
@@ -42,7 +45,7 @@ body {
   width: 100%;
 }
 
-.player__button {
+.player__button, .fullscreen {
   background:none;
   border:0;
   line-height:1;
