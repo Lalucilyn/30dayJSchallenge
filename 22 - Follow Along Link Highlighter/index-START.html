@@ -26,6 +26,30 @@
     </div>
 
   <script>
+    const links = document.querySelectorAll('a');
+    console.log(links)
+    const highLight = document.createElement('span');
+    highLight.classList.add('highlight');
+    document.body.append(highLight);
+    
+    function highLightLink(){
+      const linkCoords = this.getBoundingClientRect();
+      const coords = {
+        width:linkCoords.width,
+        height:linkCoords.height,
+        top:linkCoords.top + window.scrollY,
+        left:linkCoords.left + window.scrollX
+      }
+      console.log(coords)
+
+      highLight.style.width = `${coords.width}px`;
+      highLight.style.height = `${coords.height}px`; 
+      highLight.style.transform = `translate(${coords.left}px, ${coords.top}px)`       
+    }
+
+    links.forEach(link=>{link.addEventListener('mouseenter',highLightLink)})
+
+    
     // 👀👀👀👀👀👀👀👀👀👀👀👀👀👀👀
   </script>
 </body>
