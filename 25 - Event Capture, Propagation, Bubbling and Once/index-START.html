@@ -8,7 +8,9 @@
 
   <div class="one">
     <div class="two">
+
       <div class="three">
+      	
       </div>
     </div>
   </div>
@@ -25,21 +27,36 @@
   }
 
   .one {
-    background: thistle;
+    background: #ba68c8;
   }
 
   .two {
-    background:mistyrose;
+    background:#f06292;
   }
 
   .three {
-    background:coral;
+    background:#00bcd4;
   }
 </style>
 
 <button></button>
 <script>
+  const divs = document.querySelectorAll('div');
+  const button = document.querySelector('button')
+  function logText(e){
+  	//e.stopPropagation()
+  	console.log(this.classList.value);
+    
+  }
+  //document.body.addEventListener('click',logText);
+  divs.forEach(div=>div.addEventListener('click',logText,
+  	{once:true}
+    //{capture:false}
+  ));
 
+  button.addEventListener('click', ()=>{
+  	console.log("probanding")
+  }, {once:true})
 </script>
 </body>
 </html>
