@@ -11,17 +11,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color:#3BC1AC;
+  background-color:#ffb2ff;
   display:flex;
   min-height: 100vh;
   align-items: center;
 
   background-image:
-  radial-gradient(circle at 100% 150%, #3BC1AC 24%, #42D2BB 25%, #42D2BB 28%, #3BC1AC 29%, #3BC1AC 36%, #42D2BB 36%, #42D2BB 40%, transparent 40%, transparent),
-  radial-gradient(circle at 0    150%, #3BC1AC 24%, #42D2BB 25%, #42D2BB 28%, #3BC1AC 29%, #3BC1AC 36%, #42D2BB 36%, #42D2BB 40%, transparent 40%, transparent),
-  radial-gradient(circle at 50%  100%, #42D2BB 10%, #3BC1AC 11%, #3BC1AC 23%, #42D2BB 24%, #42D2BB 30%, #3BC1AC 31%, #3BC1AC 43%, #42D2BB 44%, #42D2BB 50%, #3BC1AC 51%, #3BC1AC 63%, #42D2BB 64%, #42D2BB 71%, transparent 71%, transparent),
-  radial-gradient(circle at 100% 50%, #42D2BB 5%, #3BC1AC 6%, #3BC1AC 15%, #42D2BB 16%, #42D2BB 20%, #3BC1AC 21%, #3BC1AC 30%, #42D2BB 31%, #42D2BB 35%, #3BC1AC 36%, #3BC1AC 45%, #42D2BB 46%, #42D2BB 49%, transparent 50%, transparent),
-  radial-gradient(circle at 0    50%, #42D2BB 5%, #3BC1AC 6%, #3BC1AC 15%, #42D2BB 16%, #42D2BB 20%, #3BC1AC 21%, #3BC1AC 30%, #42D2BB 31%, #42D2BB 35%, #3BC1AC 36%, #3BC1AC 45%, #42D2BB 46%, #42D2BB 49%, transparent 50%, transparent);
+  radial-gradient(circle at 100% 150%, #ff94c2 24%, #fff176 25%, #fff176 28%, #ffb2ff 29%, #ffb2ff 36%, #b0ff57 36%, #b0ff57 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, #ff94c2 24%, #fff176 25%, #fff176 28%, #ffb2ff 29%, #ffb2ff 36%, #b0ff57 36%, #b0ff57 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, #b0ff57 10%, #ffb2ff 11%, #ffb2ff 23%, #fff176 24%, #fff176 30%, #ff94c2 31%, #ff94c2 43%, #ffcc80 44%, #ffcc80 50%, #ffb2ff 51%, #ffb2ff 63%, #fff176 64%, #fff176 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, #fff176 5%, #8bf6ff 6%, #8bf6ff 15%, #ffcc80 16%, #ffcc80 20%, #ff94c2 21%, #ff94c2 30%, #fff176 31%, #fff176 35%, #ffb2ff 36%, #ff94c2 45%, #fff176 46%, #fff176 49%, transparent 50%, transparent),
+  radial-gradient(circle at 0    50%, #fff176 5%, #8bf6ff 6%, #8bf6ff 15%, #ffcc80 16%, #ffcc80 20%, #ff94c2 21%, #ff94c2 30%, #fff176 31%, #fff176 35%, #ffb2ff 36%, #ffb2ff 45%, #fff176 46%, #fff176 49%, transparent 50%, transparent);
   background-size:100px 50px;
 }
 
@@ -42,13 +42,13 @@ h1 {
   width:calc(100% + 4rem);
   margin: -2rem 0 2rem -2rem;
   padding:.5rem;
-  background: #ffc600;
-  border-bottom: 5px solid #F3C010;
+  background: #8bf6ff;
+  border-bottom: 5px solid #29b6f6;
   text-align: center;
   font-size: 5rem;
   font-weight: 100;
   font-family: 'Pacifico', cursive;
-  text-shadow:3px 3px 0 #F3C010;
+  text-shadow:3px 3px 0 #29b6f6;
 
 }
 
@@ -75,14 +75,14 @@ input[type="select"] {
 }
 
 .voiceinator button {
-  background:#ffc600;
+  background:#fff176;
   border:0;
   width: 49%;
   float:left;
   font-family: 'Pacifico', cursive;
   margin-bottom: 0;
   font-size: 2rem;
-  border-bottom: 5px solid #F3C010;
+  border-bottom: 5px solid #fff176;
   cursor:pointer;
   position: relative;
 }
